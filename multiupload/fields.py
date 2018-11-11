@@ -20,7 +20,7 @@ class MultiUploadMetaInput(forms.ClearableFileInput):
         self.multiple = kwargs.pop('multiple', True)
         super(MultiUploadMetaInput, self).__init__(*args, **kwargs)
 
-    def render(self, name, value, attrs=None):
+    def render(self, name, value, attrs=None, renderer=None):
         if self.multiple:
             attrs['multiple'] = 'multiple'
 
